@@ -2,17 +2,17 @@ const features = [
   {
     icon: '📅',
     title: 'Smart Scheduling',
-    description: 'Automatic conflict detection with configurable buffer zones, advance booking limits, and slot duration settings. No double bookings — ever.',
-  },
-  {
-    icon: '👥',
-    title: 'Multi-Staff Management',
-    description: 'Define individual schedules, working hours, and breaks per staff member. Customers book the right person at the right time.',
+    description: 'Automatic conflict detection with configurable buffer zones and advance booking limits. No double bookings — ever.',
   },
   {
     icon: '🛍️',
     title: 'Service Catalogue',
-    description: 'List your services with custom durations and pricing. Support for "price on request" for flexible or premium services.',
+    description: 'List your services with custom durations and pricing. Edit, deactivate, or remove them any time from your dashboard.',
+  },
+  {
+    icon: '🕐',
+    title: 'Opening Hours & Breaks',
+    description: 'Set the days and hours you accept bookings, with lunch breaks or gaps built in. Clients can only book inside them.',
   },
   {
     icon: '🔒',
@@ -22,22 +22,24 @@ const features = [
   {
     icon: '📲',
     title: 'Self-Service Booking',
-    description: 'Customers book online without creating an account. Share your public booking link and let them handle the rest.',
-  },
-  {
-    icon: '🌍',
-    title: 'Multi-Timezone & Currency',
-    description: 'Fully configurable per business. Run multiple locations with different timezones under one account.',
+    description: 'Clients create a quick free account, verify their email once, then book online themselves — no phone calls needed.',
   },
   {
     icon: '📊',
     title: 'Full Booking Lifecycle',
-    description: 'Track every booking from pending → confirmed → completed or cancelled. No-show tracking included.',
+    description: 'Track every booking from pending → confirmed → completed or cancelled, right from your bookings list or calendar.',
+  },
+  {
+    icon: '👥',
+    title: 'Multi-Staff Scheduling',
+    description: 'Per-staff schedules and bookings, so clients book the right person at the right time.',
+    comingSoon: true,
   },
   {
     icon: '🏢',
-    title: 'White-Label Ready',
-    description: 'Custom business slug, logo, and branding. Your booking page looks like yours — not ours.',
+    title: 'Logo & Branding',
+    description: 'Upload your logo and customise how your public booking page looks.',
+    comingSoon: true,
   },
 ]
 
@@ -58,8 +60,13 @@ export default function Features() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="p-5 rounded-xl border border-white/8 bg-white/3 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all group"
+              className="relative p-5 rounded-xl border border-white/8 bg-white/3 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all group"
             >
+              {f.comingSoon && (
+                <span className="absolute top-4 right-4 text-[10px] font-semibold uppercase tracking-wide text-violet-400 bg-violet-500/10 border border-violet-500/30 rounded-full px-2 py-0.5">
+                  Coming soon
+                </span>
+              )}
               <div className="text-2xl mb-3">{f.icon}</div>
               <h3 className="text-white font-semibold text-sm mb-2 group-hover:text-violet-300 transition-colors">
                 {f.title}

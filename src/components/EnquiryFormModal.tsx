@@ -63,7 +63,7 @@ export default function EnquiryFormModal({
     event.preventDefault()
 
     const subject = encodeURIComponent(
-      `DashBook enquiry from ${form.businessName}`,
+      `BookingBase enquiry from ${form.businessName}`,
     )
     const body = encodeURIComponent(
       [

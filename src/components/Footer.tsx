@@ -1,4 +1,8 @@
+import { useEnquiryModal } from '../context/EnquiryModalContext'
+
 export default function Footer() {
+  const { openEnquiry } = useEnquiryModal()
+
   return (
     <footer className="border-t border-white/5 py-12 px-6">
       <div className="max-w-6xl mx-auto">
@@ -8,14 +12,15 @@ export default function Footer() {
             Ready to take bookings online?
           </h2>
           <p className="text-slate-400 mb-6 text-base">
-            Start for free. No credit card required.
+            Tell us about your business — we'll set your account up for you.
           </p>
-          <a
-            href="#pricing"
+          <button
+            type="button"
+            onClick={openEnquiry}
             className="inline-block px-8 py-3.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-violet-500/25"
           >
-            Create your free account
-          </a>
+            Get in touch
+          </button>
         </div>
 
         {/* Footer links */}
@@ -28,7 +33,7 @@ export default function Footer() {
                 <rect x="5" y="12.5" width="6" height="1.5" rx="0.75" fill="white"/>
               </svg>
             </div>
-            <span className="text-slate-400 font-medium">DashBook</span>
+            <span className="text-slate-400 font-medium">BookingBase</span>
           </div>
 
           <div className="flex items-center gap-6">
@@ -37,7 +42,7 @@ export default function Footer() {
             <a href="mailto:regan_gray@hotmail.com" className="hover:text-slate-400 transition-colors">Contact</a>
           </div>
 
-          <p>© {new Date().getFullYear()} DashBook. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} BookingBase. All rights reserved.</p>
         </div>
       </div>
     </footer>

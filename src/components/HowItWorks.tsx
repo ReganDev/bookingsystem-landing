@@ -1,23 +1,23 @@
 const steps = [
   {
     number: '01',
-    title: 'Create your business profile',
-    description: 'Set up your business in minutes. Add your name, location, timezone, and branding. You get a unique public booking URL instantly.',
+    title: 'Get in touch',
+    description: 'Tell us about your business. We set up your account and email you a login and a temporary password — no forms to fill in yourself.',
   },
   {
     number: '02',
-    title: 'Add your staff & services',
-    description: 'Define your team\'s working hours and breaks. Add your services with durations and prices. Each staff member can offer different services.',
+    title: 'Add your services & hours',
+    description: 'Log in and add your services with durations and prices, then set the days and hours you accept bookings, breaks included.',
   },
   {
     number: '03',
     title: 'Share your booking link',
-    description: 'Send clients your unique link. They pick a service, choose a staff member, and select an available time slot — no account needed.',
+    description: 'Send clients your unique booking page. They create a quick free account, verify their email, then pick a service and an available time slot.',
   },
   {
     number: '04',
     title: 'Manage from your dashboard',
-    description: 'Confirm, cancel, or complete bookings from one place. Track no-shows, view upcoming appointments, and keep on top of your schedule.',
+    description: 'Confirm, complete, or cancel bookings from one place. See your month at a glance on the calendar, or add a booking yourself for phone and walk-in clients.',
   },
 ]
 
@@ -27,10 +27,10 @@ export default function HowItWorks() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
-            Up and running in under 10 minutes
+            No complicated setup
           </h2>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            No complicated setup. No training required. Just follow the steps.
+            We onboard you personally, then you run the day-to-day from your dashboard.
           </p>
         </div>
 

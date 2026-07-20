@@ -14,7 +14,7 @@ export default function Navbar() {
               <rect x="5" y="12.5" width="6" height="1.5" rx="0.75" fill="white"/>
             </svg>
           </div>
-          <span className="font-semibold text-white text-lg tracking-tight">DashBook</span>
+          <span className="font-semibold text-white text-lg tracking-tight">BookingBase</span>
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-400">

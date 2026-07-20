@@ -1,13 +1,11 @@
 const features = [
-  'Unlimited staff members',
   'Unlimited bookings',
-  'Public booking page with custom slug',
+  'Public booking page with custom link',
   'Service catalogue with pricing',
-  'Per-staff schedules & breaks',
+  'Opening hours & breaks',
   'Automatic conflict detection',
   'Full booking lifecycle management',
-  'No-show & cancellation tracking',
-  'Multi-timezone & currency support',
+  'Cancellation tracking',
   'Email support',
 ]
 
