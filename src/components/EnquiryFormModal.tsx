@@ -92,25 +92,25 @@ export default function EnquiryFormModal({
     >
       <button
         type="button"
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
         onClick={onClose}
         aria-label="Close enquiry form"
       />
 
-      <div className="relative w-full max-w-lg rounded-2xl border border-white/10 bg-[#12121a] shadow-2xl shadow-black/50">
-        <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
+      <div className="relative w-full max-w-lg rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-500/25">
+        <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4">
           <div>
-            <h2 id="enquiry-title" className="text-lg font-semibold text-white">
+            <h2 id="enquiry-title" className="text-lg font-semibold text-slate-900">
               Get in touch
             </h2>
-            <p className="text-sm text-slate-400 mt-0.5">
+            <p className="text-sm text-slate-500 mt-0.5">
               Tell us about your business and we&apos;ll get back to you.
             </p>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="text-slate-500 hover:text-white transition-colors p-1"
+            className="text-slate-400 hover:text-slate-700 transition-colors p-1"
             aria-label="Close"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -126,7 +126,7 @@ export default function EnquiryFormModal({
 
         {submitted ? (
           <div className="px-6 py-8 text-center">
-            <div className="w-12 h-12 rounded-full bg-emerald-500/15 text-emerald-300 flex items-center justify-center mx-auto mb-4">
+            <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-4">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M5 13l4 4L19 7"
@@ -137,17 +137,17 @@ export default function EnquiryFormModal({
                 />
               </svg>
             </div>
-            <h3 className="text-white font-semibold text-lg mb-2">
+            <h3 className="text-slate-900 font-semibold text-lg mb-2">
               Thanks for getting in touch
             </h3>
-            <p className="text-slate-400 text-sm mb-6">
+            <p className="text-slate-600 text-sm mb-6">
               Your email client should open with your enquiry ready to send.
               We&apos;ll respond as soon as we can.
             </p>
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-emerald-950 text-sm font-semibold transition-colors cursor-pointer"
+              className="px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold transition-colors cursor-pointer"
             >
               Close
             </button>
@@ -155,7 +155,7 @@ export default function EnquiryFormModal({
         ) : (
           <form onSubmit={handleSubmit} className="px-6 py-5 space-y-4">
             <div>
-              <label htmlFor="enquiry-name" className="block text-sm text-slate-300 mb-1.5">
+              <label htmlFor="enquiry-name" className="block text-sm text-slate-700 mb-1.5">
                 Full name
               </label>
               <input
@@ -164,13 +164,13 @@ export default function EnquiryFormModal({
                 value={form.name}
                 onChange={(e) => updateField('name', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label htmlFor="enquiry-email" className="block text-sm text-slate-300 mb-1.5">
+              <label htmlFor="enquiry-email" className="block text-sm text-slate-700 mb-1.5">
                 Email
               </label>
               <input
@@ -179,7 +179,7 @@ export default function EnquiryFormModal({
                 value={form.email}
                 onChange={(e) => updateField('email', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="you@business.com"
               />
             </div>
@@ -187,7 +187,7 @@ export default function EnquiryFormModal({
             <div>
               <label
                 htmlFor="enquiry-business"
-                className="block text-sm text-slate-300 mb-1.5"
+                className="block text-sm text-slate-700 mb-1.5"
               >
                 Business name
               </label>
@@ -197,13 +197,13 @@ export default function EnquiryFormModal({
                 value={form.businessName}
                 onChange={(e) => updateField('businessName', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="Your salon, clinic, studio…"
               />
             </div>
 
             <div>
-              <label htmlFor="enquiry-phone" className="block text-sm text-slate-300 mb-1.5">
+              <label htmlFor="enquiry-phone" className="block text-sm text-slate-700 mb-1.5">
                 Phone <span className="text-slate-500">(optional)</span>
               </label>
               <input
@@ -211,13 +211,13 @@ export default function EnquiryFormModal({
                 type="tel"
                 value={form.phone}
                 onChange={(e) => updateField('phone', e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="Your phone number"
               />
             </div>
 
             <div>
-              <label htmlFor="enquiry-message" className="block text-sm text-slate-300 mb-1.5">
+              <label htmlFor="enquiry-message" className="block text-sm text-slate-700 mb-1.5">
                 Message
               </label>
               <textarea
@@ -226,14 +226,14 @@ export default function EnquiryFormModal({
                 value={form.message}
                 onChange={(e) => updateField('message', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors resize-none"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors resize-none"
                 placeholder="Tell us what you're looking for…"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full px-4 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-semibold text-sm transition-colors cursor-pointer"
+              className="w-full px-4 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-colors cursor-pointer"
             >
               Send enquiry
             </button>

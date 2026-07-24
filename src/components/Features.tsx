@@ -128,10 +128,10 @@ export default function Features() {
     <section id="features" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 reveal">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             Everything you need to run bookings
           </h2>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="text-slate-600 text-lg max-w-xl mx-auto">
             Built for real service businesses, not a generic SaaS with features bolted on.
           </p>
         </div>
@@ -140,17 +140,17 @@ export default function Features() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="relative p-5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:border-emerald-500/40 hover:bg-emerald-500/[0.05] transition-all group"
+              className="relative p-5 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 hover:shadow-md hover:shadow-slate-200/60 transition-all group"
             >
               {f.comingSoon && (
-                <span className="absolute top-4 right-4 text-[10px] font-semibold uppercase tracking-wide text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-2 py-0.5">
+                <span className="absolute top-4 right-4 text-[10px] font-semibold uppercase tracking-wide text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2 py-0.5">
                   Coming soon
                 </span>
               )}
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 flex items-center justify-center mb-4 group-hover:bg-emerald-500/15 group-hover:text-emerald-200 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors">
                 {f.icon}
               </div>
-              <h3 className="text-white font-semibold text-sm mb-2 group-hover:text-emerald-200 transition-colors">
+              <h3 className="text-slate-900 font-semibold text-sm mb-2 group-hover:text-emerald-700 transition-colors">
                 {f.title}
               </h3>
               <p className="text-slate-500 text-xs leading-relaxed">{f.description}</p>
