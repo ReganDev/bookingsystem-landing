@@ -126,7 +126,7 @@ export default function EnquiryFormModal({
 
         {submitted ? (
           <div className="px-6 py-8 text-center">
-            <div className="w-12 h-12 rounded-full bg-violet-500/15 text-violet-400 flex items-center justify-center mx-auto mb-4">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/15 text-emerald-300 flex items-center justify-center mx-auto mb-4">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M5 13l4 4L19 7"
@@ -147,7 +147,7 @@ export default function EnquiryFormModal({
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium transition-colors"
+              className="px-6 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-emerald-950 text-sm font-semibold transition-colors cursor-pointer"
             >
               Close
             </button>
@@ -164,7 +164,7 @@ export default function EnquiryFormModal({
                 value={form.name}
                 onChange={(e) => updateField('name', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="Your name"
               />
             </div>
@@ -179,7 +179,7 @@ export default function EnquiryFormModal({
                 value={form.email}
                 onChange={(e) => updateField('email', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="you@business.com"
               />
             </div>
@@ -197,7 +197,7 @@ export default function EnquiryFormModal({
                 value={form.businessName}
                 onChange={(e) => updateField('businessName', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="Your salon, clinic, studio…"
               />
             </div>
@@ -211,7 +211,7 @@ export default function EnquiryFormModal({
                 type="tel"
                 value={form.phone}
                 onChange={(e) => updateField('phone', e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30 transition-colors"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors"
                 placeholder="Your phone number"
               />
             </div>
@@ -226,14 +226,14 @@ export default function EnquiryFormModal({
                 value={form.message}
                 onChange={(e) => updateField('message', e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30 transition-colors resize-none"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-colors resize-none"
                 placeholder="Tell us what you're looking for…"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full px-4 py-3 rounded-lg bg-violet-600 hover:bg-violet-500 text-white font-medium text-sm transition-colors"
+              className="w-full px-4 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-semibold text-sm transition-colors cursor-pointer"
             >
               Send enquiry
             </button>
