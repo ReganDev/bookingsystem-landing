@@ -27,9 +27,9 @@ export default function Pricing() {
         </div>
 
         <div className="max-w-md mx-auto pt-5 reveal">
-          <div className="relative rounded-2xl border-2 border-emerald-500/60 bg-white px-8 pb-8 pt-12 flex flex-col shadow-xl shadow-emerald-600/10">
+          <div className="relative rounded-2xl border-2 border-emerald-500 bg-white px-8 pb-8 pt-12 flex flex-col">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-2 w-full max-w-[calc(100%-1rem)] flex justify-center">
-              <span className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-semibold text-center leading-snug shadow-md border border-emerald-400/40">
+              <span className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-emerald-700 text-white text-xs font-semibold text-center leading-snug">
                 2-Week Free Trial · No Payment Required
               </span>
             </div>
@@ -57,14 +57,14 @@ export default function Pricing() {
             <button
               type="button"
               onClick={openEnquiry}
-              className="block text-center py-3.5 px-6 rounded-xl font-semibold text-sm bg-emerald-600 hover:bg-emerald-500 text-white transition-all hover:shadow-lg hover:shadow-emerald-600/25 cursor-pointer"
+              className="block text-center py-3.5 px-6 rounded-xl font-semibold text-sm bg-emerald-700 hover:bg-emerald-600 text-white transition-colors cursor-pointer"
             >
               Start your free trial
             </button>
           </div>
         </div>
 
-        <p className="text-center text-slate-500 text-sm mt-8">
+        <p className="text-center text-slate-600 text-sm mt-8">
           Cancel any time. No contracts, no lock-in.
         </p>
       </div>

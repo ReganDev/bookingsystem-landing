@@ -147,7 +147,7 @@ export default function EnquiryFormModal({
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold transition-colors cursor-pointer"
+              className="px-6 py-2.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold transition-colors cursor-pointer"
             >
               Close
             </button>
@@ -233,7 +233,7 @@ export default function EnquiryFormModal({
 
             <button
               type="submit"
-              className="w-full px-4 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-colors cursor-pointer"
+              className="w-full px-4 py-3 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-sm transition-colors cursor-pointer"
             >
               Send enquiry
             </button>

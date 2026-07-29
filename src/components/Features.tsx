@@ -140,20 +140,20 @@ export default function Features() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="relative p-5 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 hover:shadow-md hover:shadow-slate-200/60 transition-all group"
+              className="relative p-5 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 transition-colors group"
             >
               {f.comingSoon && (
-                <span className="absolute top-4 right-4 text-[10px] font-semibold uppercase tracking-wide text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2 py-0.5">
+                <span className="absolute top-4 right-4 text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
                   Coming soon
                 </span>
               )}
-              <div className="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors">
-                {f.icon}
+              <div className="flex items-center gap-2.5 mb-2.5">
+                <span className="text-emerald-700 shrink-0 [&>svg]:w-5 [&>svg]:h-5">{f.icon}</span>
+                <h3 className="text-slate-900 font-semibold text-[15px] group-hover:text-emerald-700 transition-colors">
+                  {f.title}
+                </h3>
               </div>
-              <h3 className="text-slate-900 font-semibold text-sm mb-2 group-hover:text-emerald-700 transition-colors">
-                {f.title}
-              </h3>
-              <p className="text-slate-500 text-xs leading-relaxed">{f.description}</p>
+              <p className="text-slate-600 text-[13px] leading-relaxed">{f.description}</p>
             </div>
           ))}
         </div>

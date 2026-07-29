@@ -4,10 +4,10 @@ export default function Navbar() {
   const { openEnquiry } = useEnquiryModal()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/70 bg-[#f6f8f7]/80 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-[#f6f8f7]">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-sm shadow-emerald-500/30">
+          <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M8 2a1 1 0 011 1v1.5h2.5a1 1 0 010 2H9V8a1 1 0 01-2 0V6.5H4.5a1 1 0 010-2H7V3a1 1 0 011-1z" fill="#ffffff"/>
               <rect x="3" y="10" width="10" height="1.5" rx="0.75" fill="#ffffff"/>
@@ -27,7 +27,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={openEnquiry}
-            className="text-sm px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-colors cursor-pointer"
+            className="text-sm px-4 py-2 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-semibold transition-colors cursor-pointer"
           >
             Get in touch
           </button>

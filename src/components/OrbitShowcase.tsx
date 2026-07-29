@@ -33,7 +33,7 @@ const Stethoscope = () => (
 )
 
 /* ---- Orbit data: distributed across three counter-rotating tracks ---- */
-type Avatar = { type: 'avatar'; initials: string; gradient: string; a: string; r: string }
+type Avatar = { type: 'avatar'; initials: string; color: string; a: string; r: string }
 type Tile = { type: 'tile'; icon: ReactNode; a: string; r: string }
 type Item = Avatar | Tile
 
@@ -41,9 +41,9 @@ const tracks: { dur: string; dir?: 'ccw'; items: Item[] }[] = [
   {
     dur: '48s',
     items: [
-      { type: 'avatar', initials: 'EM', gradient: 'linear-gradient(140deg,#a7f3d0,#059669)', a: '18deg', r: '46cqmin' },
+      { type: 'avatar', initials: 'EM', color: '#047857', a: '18deg', r: '46cqmin' },
       { type: 'tile', icon: <Scissors />, a: '142deg', r: '46cqmin' },
-      { type: 'avatar', initials: 'RP', gradient: 'linear-gradient(140deg,#99f6e4,#0d9488)', a: '256deg', r: '46cqmin' },
+      { type: 'avatar', initials: 'RP', color: '#065f46', a: '256deg', r: '46cqmin' },
     ],
   },
   {
@@ -51,7 +51,7 @@ const tracks: { dur: string; dir?: 'ccw'; items: Item[] }[] = [
     dir: 'ccw',
     items: [
       { type: 'tile', icon: <Sparkle />, a: '74deg', r: '35cqmin' },
-      { type: 'avatar', initials: 'JD', gradient: 'linear-gradient(140deg,#bbf7d0,#10b981)', a: '196deg', r: '35cqmin' },
+      { type: 'avatar', initials: 'JD', color: '#064e3b', a: '196deg', r: '35cqmin' },
       { type: 'tile', icon: <Stethoscope />, a: '314deg', r: '35cqmin' },
     ],
   },
@@ -60,7 +60,7 @@ const tracks: { dur: string; dir?: 'ccw'; items: Item[] }[] = [
 function OrbitItem({ item }: { item: Item }) {
   const node =
     item.type === 'avatar' ? (
-      <div className="orbit-avatar" style={{ backgroundImage: item.gradient }}>
+      <div className="orbit-avatar" style={{ backgroundColor: item.color }}>
         {item.initials}
       </div>
     ) : (

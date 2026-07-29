@@ -17,34 +17,31 @@ type Step = {
 
 /* Step 1 has no product screenshot, so it gets an illustrated "account ready" card */
 const AccountReadyCard = () => (
-  <div className="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-300/40 overflow-hidden">
-    <div className="absolute -top-16 -right-10 w-56 h-56 bg-emerald-200/40 blur-3xl rounded-full pointer-events-none" />
-    <div className="relative">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <path d="M4 6.5l8 6 8-6" />
-          </svg>
-        </div>
-        <div>
-          <p className="text-slate-900 text-sm font-semibold">Your account is ready</p>
-          <p className="text-slate-500 text-xs">from BookingBase</p>
-        </div>
+  <div className="rounded-2xl border border-slate-300 bg-white p-8">
+    <div className="flex items-center gap-3 mb-6 pb-5 border-b border-slate-200">
+      <span className="text-emerald-700 shrink-0">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="M4 6.5l8 6 8-6" />
+        </svg>
+      </span>
+      <div>
+        <p className="text-slate-900 text-sm font-semibold">Your account is ready</p>
+        <p className="text-slate-600 text-[13px]">from BookingBase</p>
       </div>
-      <div className="space-y-3 text-sm">
-        <div className="flex items-center justify-between rounded-lg bg-slate-50 border border-slate-200 px-3.5 py-2.5">
-          <span className="text-slate-500">Login</span>
-          <span className="text-slate-700 font-medium">you@yourbusiness.com</span>
-        </div>
-        <div className="flex items-center justify-between rounded-lg bg-slate-50 border border-slate-200 px-3.5 py-2.5">
-          <span className="text-slate-500">Temporary password</span>
-          <span className="text-emerald-700 font-mono tracking-wider">•••••••••</span>
-        </div>
-        <div className="flex items-center justify-between rounded-lg bg-emerald-50 border border-emerald-200 px-3.5 py-2.5">
-          <span className="text-emerald-800">Dashboard</span>
-          <span className="text-emerald-700 font-medium">Log in →</span>
-        </div>
+    </div>
+    <div className="divide-y divide-slate-200 text-sm">
+      <div className="flex items-center justify-between py-2.5">
+        <span className="text-slate-600">Login</span>
+        <span className="text-slate-800 font-medium">you@yourbusiness.com</span>
+      </div>
+      <div className="flex items-center justify-between py-2.5">
+        <span className="text-slate-600">Temporary password</span>
+        <span className="text-emerald-700 font-mono tracking-wider">•••••••••</span>
+      </div>
+      <div className="flex items-center justify-between py-2.5">
+        <span className="text-slate-600">Dashboard</span>
+        <span className="text-emerald-700 font-semibold">Log in →</span>
       </div>
     </div>
   </div>
@@ -112,17 +109,14 @@ function BrowserFrame({
   url?: string
 }) {
   return (
-    <div className="relative">
-      <div className="absolute -inset-4 bg-emerald-300/15 blur-3xl rounded-full pointer-events-none" aria-hidden="true" />
-      <div className="relative rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xl shadow-slate-300/50 ring-1 ring-emerald-600/10">
-        <div className="flex items-center gap-2 px-4 py-2.5 border-b border-slate-100 bg-slate-50">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-          <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-          <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-          {url && <span className="ml-3 text-[11px] text-slate-400 truncate">{url}</span>}
-        </div>
-        <img src={image} alt={alt} className="w-full block" loading="lazy" />
+    <div className="rounded-2xl border border-slate-300 bg-white overflow-hidden">
+      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-slate-200">
+        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+        <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+        <div className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+        {url && <span className="ml-3 text-xs text-slate-500 truncate">{url}</span>}
       </div>
+      <img src={image} alt={alt} className="w-full block" loading="lazy" />
     </div>
   )
 }
@@ -146,7 +140,7 @@ export default function HowItWorks() {
 
         <div className="relative space-y-16 lg:space-y-24">
           {/* Vertical connector line on desktop */}
-          <div className="hidden lg:block absolute left-1/2 top-4 bottom-4 w-px -translate-x-1/2 bg-gradient-to-b from-emerald-400/50 via-emerald-300/30 to-transparent" aria-hidden="true" />
+          <div className="hidden lg:block absolute left-1/2 top-4 bottom-4 w-px -translate-x-1/2 bg-emerald-200" aria-hidden="true" />
 
           {steps.map((step, i) => {
             const imageFirst = i % 2 === 1

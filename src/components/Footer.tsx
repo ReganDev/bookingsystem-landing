@@ -19,7 +19,7 @@ export default function Footer() {
             <button
               type="button"
               onClick={openEnquiry}
-              className="inline-block px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-emerald-600/25 cursor-pointer"
+              className="inline-block px-8 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-sm transition-colors cursor-pointer"
             >
               Get in touch
             </button>
@@ -27,9 +27,9 @@ export default function Footer() {
         </div>
 
         {/* Footer links */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+            <div className="w-6 h-6 rounded-md bg-emerald-600 flex items-center justify-center">
               <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
                 <path d="M8 2a1 1 0 011 1v1.5h2.5a1 1 0 010 2H9V8a1 1 0 01-2 0V6.5H4.5a1 1 0 010-2H7V3a1 1 0 011-1z" fill="#ffffff"/>
                 <rect x="3" y="10" width="10" height="1.5" rx="0.75" fill="#ffffff"/>
