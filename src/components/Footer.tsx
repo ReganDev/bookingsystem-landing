@@ -1,4 +1,5 @@
 import { useEnquiryModal } from '../context/EnquiryModalContext'
+import { CONTACT_EMAIL } from '../constants'
 
 export default function Footer() {
   const { openEnquiry } = useEnquiryModal()
@@ -42,7 +43,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a href="#features" className="hover:text-slate-800 transition-colors">Features</a>
             <a href="#pricing" className="hover:text-slate-800 transition-colors">Pricing</a>
-            <a href="mailto:regan_gray@hotmail.com" className="hover:text-slate-800 transition-colors">Contact</a>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-slate-800 transition-colors">Contact</a>
           </div>
 
           <p>© {new Date().getFullYear()} BookingBase. All rights reserved.</p>

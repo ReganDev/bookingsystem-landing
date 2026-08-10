@@ -1,6 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react'
-
-const CONTACT_EMAIL = 'regan_gray@hotmail.com'
+import { CONTACT_EMAIL } from '../constants'
 
 type EnquiryFormModalProps = {
   isOpen: boolean
